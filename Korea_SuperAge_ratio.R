@@ -5,6 +5,7 @@ install.packages("rgeos")
 install.packages("maptools")
 install.packages("rgdal")
 install.packages('readxl')
+install.packages("viridis")
 library(RColorBrewer)
 library(ggmap)
 library(ggplot2)
@@ -14,13 +15,13 @@ library(raster)
 library(rgeos)
 library(maptools)
 library(dplyr)
-install.packages("viridis")
 library(viridis)
 
 
 display.brewer.all()
 korea <- shapefile("material/TL_SCCO_CTPRVN.shp")
   
+
 korea <- spTransform(korea,CRS("+proj=longlat"))
 kore_map <-fortify(korea)
 
@@ -29,17 +30,10 @@ as.data.frame(population)
 View(population)
 
 y00 <- population %>% select('시도','y00','id')
-View(y00)
+View(y19)
 
-y04 <- population %>% select('시도','y04','id')
-View(y04)
-
-merge_00<- merge(kore_map,y00,by="id")
-y00 <- ggplot() + geom_polygon(data=merge_00,aes(x=long,y=lat,group=group,fill=y00)) +labs(fill="2000년도 고령화 비율(%)") 
-y00
-
-
-merge_04<- merge(kore_map,y04,by="id")
-y04 <- ggplot() + geom_polygon(data=merge_04,aes(x=long,y=lat,group=group,fill=y04)) +labs(fill="2004년도 고령화 비율(%)") 
-y04 +  scale_fill_gradient(low="green", high="red", limits=c(0.1, 14))
+y19 <- population %>% select('시도','y19','id')
+merge_19<- merge(kore_map,y19,by="id")
+y19 <- ggplot() + geom_polygon(data=merge_19,aes(x=long,y=lat,group=group,fill=y19)) +labs(fill="2019년도 고령화 비율(%)")  
+y13 +  scale_fill_gradient(low="green", high="red", limits=c(0,23))
 
