@@ -1,0 +1,23 @@
+library(readxl)
+library(ggplot2)
+library(reshape)
+library(dplyr)
+bokji <- read_excel("material/노인복지2.xlsx")
+View(old)
+
+rownames(bokji) <- NULL
+bokji
+bokji <- bokji[-c(7,8,9,10,11,14,15,16),]
+bokji
+
+bokji <- data.frame(bokji)
+
+melt(bokji,id = c("시설"))
+bokji <- melt(bokji,id.vars = "시설")
+View(bokji)
+
+str(bokji)
+as.data.frame(bokji)
+
+bokji4 <- ggplot(bokji4,aes(x=variable,y=value,fill=시설))
+bokji4 + geom_bar(stat = "identity",position="dodge")

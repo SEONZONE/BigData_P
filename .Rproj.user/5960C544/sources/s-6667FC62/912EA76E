@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1581323725968.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "912EA76E",
+    "lastKnownWriteTime" : 1580864022,
+    "last_content_update" : 1580864022,
+    "path" : "~/GitHub/BigData_P/Korea_SuperAge_ratio.R",
+    "project_path" : "Korea_SuperAge_ratio.R",
+    "properties" : {
+        "cursorPosition" : "7,0",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1581382960112.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "131D627F",
+    "lastKnownWriteTime" : 2321941096933892128,
+    "last_content_update" : 1581382960112,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "AF7CB601",
+        "caption" : "word_table",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=word_table&cache_key=AF7CB601",
+        "displayedObservations" : 782,
+        "environment" : "",
+        "expression" : "word_table",
+        "object" : "word_table",
+        "preview" : 0,
+        "totalObservations" : 782,
+        "variables" : 2
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}
