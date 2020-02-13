@@ -28,7 +28,7 @@ View(datPop4Ani)
 datPopAni <- subset(datPopAni,select=-age)
 #================ gganimate 실행 =========================
 
-ggplot(datPopAni, aes(x=age2, 
+ggplot(datPop4Ani, aes(x=age2, 
                       y=ifelse(gender=='male', 
                                population/10000, -population/10000), fill=gender)) +
   geom_bar(stat='identity') +
@@ -44,3 +44,4 @@ ggplot(datPopAni, aes(x=age2,
   transition_time(year) + 
   enter_fade() -> p
 p
+anim_save('population.gif')
