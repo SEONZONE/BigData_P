@@ -13,4 +13,4 @@ grade_result <- melt(grade1,id.vars='area')
 View(grade_result)
 
 ratio <- ggplot(grade_result,aes(x=area,y=value,fill=variable))
-ratio + geom_bar(stat='identity',position = 'dodge') + scale_fill_manual(name='성별', labels=c('재가 대상자', '실제 이용자'), values=c('darkorange', 'dodgerblue2')) +xlab('지역') + ylab('비율') +theme_bw()+scale_y_continuous(breaks=seq(0,25,1))
+ratio + geom_bar(stat='identity',position = 'dodge') + scale_fill_manual(name='', labels=c('재가 대상자', '실제 이용자'), values=c('darkorange', 'dodgerblue2')) +xlab('지역') + ylab('비율') +theme_bw()+scale_y_continuous(breaks=seq(0,25,1))
