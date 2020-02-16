@@ -1,4 +1,7 @@
 install.packages("twitteR")
+install.packages("KoNLP")
+install.packages("rJava")
+library(rJava)
 library(twitteR)
 library(KoNLP)
 useSejongDic()
@@ -38,3 +41,4 @@ word_table <-  table(bigdata_noun)
 #트위터에서 고령화 키워드로 나온 결과를 워드클라우드로 보여줌 
 wordcloud2(word_table, fontFamily = "맑은고딕", size = 5, color = "random-light", backgroundColor = "black")
 
+Sys.getenv("JAVA_HOME")

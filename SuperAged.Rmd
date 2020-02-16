@@ -11,7 +11,8 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## 인구 피라미드 
+##인구 피라미드
+##SGIS 통계지리정보서비스 인구피라미드
 ```{r Human Pyramid}
 library(gganimate)
 library(gifski)
@@ -54,6 +55,7 @@ p
 ```
 
 ##노인복지시설 수
+##KOSIS 노인복지 생활시설 수 및 생활현황
 ```{r ## 노인복지시설 수 }
 library(readxl)
 library(dplyr)
@@ -90,7 +92,7 @@ pacdata$place
 ggplot(pacdata, aes(x=place, y=cnt)) + 
   geom_col( fill = ifelse(pacdata$cnt >= 10000, "orange", 
                                   ifelse(pacdata$cnt >= 5000, "dodgerblue2",
-                                         ifelse(pacdata$cnt >= 1000, "dodgerblue", "darkorange")))) +
+                                         ifelse(pacdata$cnt >= 1000, "green", "red")))) +
   xlab('노인복지시설') + ylab('인원') +
   theme_bw()+ scale_y_continuous(breaks=seq(0,100000,5000)) 
 ```
@@ -116,7 +118,7 @@ ggplot(data = area, aes(x =facilities, y =수용인원 )) +
 
 ```
 ##재가 실 사용자 
-
+##출처 : KOSIS  시·군·구별 등급별 자격별 판정 현황(계)
 
 ```{r 재가 실 사용자 그래프}
 grade <- read_excel('material/등급별.xlsx')
@@ -135,4 +137,6 @@ grade_result <- melt(grade1,id.vars='area')
 ratio <- ggplot(grade_result,aes(x=area,y=value,fill=variable))
 ratio + geom_bar(stat='identity',position = 'dodge') + scale_fill_manual(name='', labels=c('재가 대상자', '실제 이용자'), values=c('darkorange', 'dodgerblue2')) +xlab('지역') + ylab('비율') +theme_bw()+scale_y_continuous(breaks=seq(0,25,1))
 ```
+
+
 
